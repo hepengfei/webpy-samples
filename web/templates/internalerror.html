@@ -1,0 +1,31 @@
+$def with()
+<!DOCTYPE html>
+<html>
+	<head>
+                <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>502错误 - 您的访问出错啦！</title>
+	</head>
+	<body>
+		<h2>很抱歉，您要访问的页面出错了。</h2>
+		<p></p>
+		<p>&nbsp;&nbsp;即将跳转到<a href="/">主页</a>... <span id="counter"></span> </p>
+		<p></p>
+	</body>
+	<script lang="javascript">
+		function gohome() { window.location="/"; }
+		max_count = 3;
+		function count() {
+		        document.getElementById('counter').innerHTML=max_count;
+			if(max_count == 0) {
+				gohome();
+			} else {
+				max_count=max_count-1;
+				setTimeout(count, 1 * 1000);
+			}
+		}
+
+                count();
+		
+	</script>
+</html>
+

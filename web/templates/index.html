@@ -1,0 +1,9 @@
+$def with()
+<h3>请告诉我你的名字！ / Please tell me your name!</h3>
+<form action="/hello" method="get">
+  <label for="id_name">你的名字 / Your Name：</label>
+  <input id="id_name" name="name" type="text" maxlength="128"/>
+  <input type="submit" value="提交 / Commit"
+	 onclick="return goto('/hello/'+encodeURIComponent($('id_name').value));"/>
+</form>
+
